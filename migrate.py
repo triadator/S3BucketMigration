@@ -27,7 +27,7 @@ def migrate_objects(minio_client: Minio, bucket_name: str, new_path_template: st
 
 def migrate_files(minio_client: Minio):
     """Миграция файлов из бакета 'files'."""
-    new_path_template = "sites/{}/libraries/{}/files/{}/{}"
+    new_path_template = "sites/{}/libraries/{}/{}/{}"
     migrate_objects(minio_client, "files", new_path_template)
 
 def migrate_attachments(minio_client: Minio):
